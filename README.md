@@ -3,14 +3,17 @@
 Made with <3 by Brandon Qiao (github.com/bqia0) and Skyler Shi (github.com/icarusoars)
 
 **Introduction**
+
 For our final project, we implemented a drawing canvas that allows users to perform free-form drawing with a handheld laser pointer. By using Altera’s DC2 camera module and the provided Verilog code on Altera’s website to interface the camera, we configured our camera to be able to track the laser pointer dot. Then we used the position information of the dot as an input to draw different colors onto the VGA monitor. The result is our final project – a free-form drawing canvas.
 
 **Design Choices**
+
 When we were coding our final project, we made several design choices that ultimately impacted our final product. First of all, we decided to use on chip memory to store our frame buffer instead of the bigger SDRAM & SRAM. This is because we had much difficulty interfacing with the SDRAM & SRAM. By using OCM, we were able to represent less colors, but encountered much less timing issues than using SDRAM or SRAM. 
 Second of all, we encountered issues in the conflicting widths in signals between our design and Altera provided code. For example, Altera’s camera module CCD_Capture outputs pixel coordinates as 11 bits whereas our framebuffer only has enough memory space for addresses of 10 bits. In such a scenario, we decided to truncate the 11 bits outputted by the CCD_Capture into 10 bits by taking the 10 most significant bits. We performed experiments and confirmed such a practice does give us the correct pixel coordinates and the expected output.
 Lastly, to initialize the frame buffer so we get a blank canvas, we decided to read from a textfile hex color values instead of using a system Verilog for loop to instantiate all memory spaces in the OCM frame buffer. This is because compiling the for loop for all the memory spaces takes very long and makes it very hard to debug the circuit. Hence, we chose to load frame buffer hex color values from a text file. The trade-off is that the frame buffer cannot be easily reset without an entire system reset.
 
 **Operation of Drawing Canvas**
+
 The camera is pointed to a flat surface. Switches [15:0] on the board are used to adjust the exposure amount of the camera. The red laser pointer moves the cursor on the VGA screen and when it is turned off or moved off screen the cursor remains in its last registered position. Switches [17:16] are used to toggle the four different colors users can draw from – white, black, red, blue. Key2 on the board is the draw button that draws pixels of the selected color at the cursor position when pressed.
 
 **High Level Description**
@@ -52,11 +55,19 @@ VGA Controller
 
 This is the module from lab 8 that controls the signals needed to drive the VGA. We did not make any modifications to this module. For our project’s purposes, the VGA displayable area is still 640 * 480 and including the front and back porches, the VGA spans 800 * 525 pixels. All the horizontal and vertical sync signals are also left unchanged.
 
+**Demonstration**
+
+![Demonstration](https://github.com/bqia0/Laser-Pointer-Paint/blob/master/images/demo.jpg?raw=true)
+
+[Video Demonstration](https://youtu.be/l6_TmI1IFWs)
+
 **Further Steps**
+
 As results from the demo showed us, even with a faster clock of 100MHz, the pixels are being drawn at a rate too sparse. What should be connected lines do not seem like connected lines. Since on chip memory is very fast and it is being read and written into at speeds of 100 MHz, our theory is that the camera is not sending enough frames, making the detection of our laser pointer dot happen more infrequently than we would like.
 Our solution to this is to employ Bresenham’s algorithm, which is an algorithm colors the correct pixels to form a line between two pixels. To do this we would have to record the pixel coordinates of the pixel previously drawn and the pixel being drawn and then employ the algorithm to color all the pixels in between them to form a line. Doing so would make our laser drawing form coherent lines instead of the dots we see now despite the suspected camera hardware limitation.
 Another step we wanted to take was to let the user be able to select different widths to draw from. This would require detecting which direction the user is drawing from and coloring the pixels vertical to the direction of travel.
 
 
 **Conclusion**
+
 In this final project we implemented a minimum laser-pointer driven drawing canvas. The idea is to allow the users to be able to draw more naturally than using a mouse or other form of input. We read into depth how to interface the DC2 Altera camera module, which had rather poor documentation. We also spent a lot of time trying to implement a frame buffer with SDRAM and SRAM, but we failed to do so. This wasted a lot of our time for the final project. If we had more time, we would have implemented the features mentioned in further steps. However, despite the deficiencies, we feel like this is a useful product that can be improved to be much more impressive with more time.
