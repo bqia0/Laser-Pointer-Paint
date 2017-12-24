@@ -1,0 +1,32 @@
+
+module nios_system (
+	clk_clk,
+	reset_reset_n,
+	video_decoder_0_external_interface_TD_CLK27,
+	video_decoder_0_external_interface_TD_DATA,
+	video_decoder_0_external_interface_TD_HS,
+	video_decoder_0_external_interface_TD_VS,
+	video_decoder_0_external_interface_clk27_reset,
+	video_decoder_0_external_interface_TD_RESET,
+	video_decoder_0_external_interface_overflow_flag,
+	video_stream_export,
+	video_dma_controller_0_avalon_dma_master_address,
+	video_dma_controller_0_avalon_dma_master_waitrequest,
+	video_dma_controller_0_avalon_dma_master_write,
+	video_dma_controller_0_avalon_dma_master_writedata);	
+
+	input		clk_clk;
+	input		reset_reset_n;
+	input		video_decoder_0_external_interface_TD_CLK27;
+	input	[7:0]	video_decoder_0_external_interface_TD_DATA;
+	input		video_decoder_0_external_interface_TD_HS;
+	input		video_decoder_0_external_interface_TD_VS;
+	input		video_decoder_0_external_interface_clk27_reset;
+	output		video_decoder_0_external_interface_TD_RESET;
+	output		video_decoder_0_external_interface_overflow_flag;
+	input		video_stream_export;
+	output	[31:0]	video_dma_controller_0_avalon_dma_master_address;
+	input		video_dma_controller_0_avalon_dma_master_waitrequest;
+	output		video_dma_controller_0_avalon_dma_master_write;
+	output	[31:0]	video_dma_controller_0_avalon_dma_master_writedata;
+endmodule

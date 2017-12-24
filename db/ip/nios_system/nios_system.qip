@@ -1,0 +1,76 @@
+set_global_assignment -entity "nios_system" -library "nios_system" -name IP_TOOL_NAME "Qsys"
+set_global_assignment -entity "nios_system" -library "nios_system" -name IP_TOOL_VERSION "15.0"
+set_global_assignment -entity "nios_system" -library "nios_system" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -library "nios_system" -name SOPCINFO_FILE [file join $::quartus(qip_path) "../../../nios_system.sopcinfo"]
+set_global_assignment -entity "nios_system" -library "nios_system" -name SLD_INFO "QSYS_NAME nios_system HAS_SOPCINFO 1 GENERATION_ID 1512792298"
+set_global_assignment -library "nios_system" -name SLD_FILE [file join $::quartus(qip_path) "nios_system.debuginfo"]
+set_global_assignment -entity "nios_system" -library "nios_system" -name IP_TARGETED_DEVICE_FAMILY "Cyclone IV E"
+set_global_assignment -entity "nios_system" -library "nios_system" -name IP_GENERATED_DEVICE_FAMILY "{Cyclone IV E}"
+set_global_assignment -entity "nios_system" -library "nios_system" -name IP_QSYS_MODE "SYSTEM"
+set_global_assignment -name SYNTHESIS_ONLY_QIP ON
+set_global_assignment -library "nios_system" -name MISC_FILE [file join $::quartus(qip_path) "../../../nios_system.qsys"]
+set_global_assignment -entity "nios_system" -library "nios_system" -name IP_COMPONENT_NAME "bmlvc19zeXN0ZW0="
+set_global_assignment -entity "nios_system" -library "nios_system" -name IP_COMPONENT_DISPLAY_NAME "bmlvc19zeXN0ZW0="
+set_global_assignment -entity "nios_system" -library "nios_system" -name IP_COMPONENT_REPORT_HIERARCHY "On"
+set_global_assignment -entity "nios_system" -library "nios_system" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "nios_system" -library "nios_system" -name IP_COMPONENT_VERSION "MS4w"
+set_global_assignment -entity "nios_system" -library "nios_system" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MTUxMjc5MjI5OA==::QXV0byBHRU5FUkFUSU9OX0lE"
+set_global_assignment -entity "nios_system" -library "nios_system" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfRkFNSUxZ::Q3ljbG9uZSBJViBF::QXV0byBERVZJQ0VfRkFNSUxZ"
+set_global_assignment -entity "nios_system" -library "nios_system" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0U=::RVA0Q0UxMTVGMjlDNw==::QXV0byBERVZJQ0U="
+set_global_assignment -entity "nios_system" -library "nios_system" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfU1BFRURHUkFERQ==::Nw==::QXV0byBERVZJQ0VfU1BFRURHUkFERQ=="
+set_global_assignment -entity "nios_system" -library "nios_system" -name IP_COMPONENT_PARAMETER "QVVUT19DTEtfQ0xPQ0tfUkFURQ==::LTE=::QXV0byBDTE9DS19SQVRF"
+set_global_assignment -entity "nios_system" -library "nios_system" -name IP_COMPONENT_PARAMETER "QVVUT19DTEtfQ0xPQ0tfRE9NQUlO::LTE=::QXV0byBDTE9DS19ET01BSU4="
+set_global_assignment -entity "nios_system" -library "nios_system" -name IP_COMPONENT_PARAMETER "QVVUT19DTEtfUkVTRVRfRE9NQUlO::LTE=::QXV0byBSRVNFVF9ET01BSU4="
+set_global_assignment -entity "nios_system_video_stream_router_0" -library "nios_system" -name IP_COMPONENT_NAME "bmlvc19zeXN0ZW1fdmlkZW9fc3RyZWFtX3JvdXRlcl8w"
+set_global_assignment -entity "nios_system_video_stream_router_0" -library "nios_system" -name IP_COMPONENT_DISPLAY_NAME "VmlkZW8tU3RyZWFtIFJvdXRlcg=="
+set_global_assignment -entity "nios_system_video_stream_router_0" -library "nios_system" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "nios_system_video_stream_router_0" -library "nios_system" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "nios_system_video_stream_router_0" -library "nios_system" -name IP_COMPONENT_AUTHOR "QWx0ZXJhIFVuaXZlcnNpdHkgUHJvZ3JhbQ=="
+set_global_assignment -entity "nios_system_video_stream_router_0" -library "nios_system" -name IP_COMPONENT_VERSION "MTUuMA=="
+set_global_assignment -entity "nios_system_video_stream_router_0" -library "nios_system" -name IP_COMPONENT_DESCRIPTION "VmlkZW8tU3RyZWFtIFJvdXRlciBmb3IgREUtc2VyaWVzIEJvYXJkcw=="
+set_global_assignment -entity "nios_system_video_stream_router_0" -library "nios_system" -name IP_COMPONENT_PARAMETER "cm91dGVyX3R5cGU=::TWVyZ2U=::U3RyZWFtIFJvdXRlciBUeXBl"
+set_global_assignment -entity "nios_system_video_stream_router_0" -library "nios_system" -name IP_COMPONENT_PARAMETER "c3luYw==::ZmFsc2U=::RW5hYmxlIFN5bmNocm9uaXphdGlvbiBTdHJlYW0="
+set_global_assignment -entity "nios_system_video_stream_router_0" -library "nios_system" -name IP_COMPONENT_PARAMETER "Y29sb3JfYml0cw==::OA==::Q29sb3IgQml0cw=="
+set_global_assignment -entity "nios_system_video_stream_router_0" -library "nios_system" -name IP_COMPONENT_PARAMETER "Y29sb3JfcGxhbmVz::MQ==::Q29sb3IgUGxhbmVz"
+set_global_assignment -entity "nios_system_video_stream_router_0" -library "nios_system" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfRkFNSUxZ::Q3ljbG9uZSBJViBF::QXV0byBERVZJQ0VfRkFNSUxZ"
+set_global_assignment -entity "nios_system_video_stream_router_0" -library "nios_system" -name IP_COMPONENT_PARAMETER "QVVUT19DTEtfQ0xPQ0tfUkFURQ==::LTE=::QXV0byBDTE9DS19SQVRF"
+set_global_assignment -entity "nios_system_video_dma_controller_0" -library "nios_system" -name IP_COMPONENT_NAME "bmlvc19zeXN0ZW1fdmlkZW9fZG1hX2NvbnRyb2xsZXJfMA=="
+set_global_assignment -entity "nios_system_video_dma_controller_0" -library "nios_system" -name IP_COMPONENT_DISPLAY_NAME "RE1BIENvbnRyb2xsZXI="
+set_global_assignment -entity "nios_system_video_dma_controller_0" -library "nios_system" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "nios_system_video_dma_controller_0" -library "nios_system" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "nios_system_video_dma_controller_0" -library "nios_system" -name IP_COMPONENT_AUTHOR "QWx0ZXJhIFVuaXZlcnNpdHkgUHJvZ3JhbQ=="
+set_global_assignment -entity "nios_system_video_dma_controller_0" -library "nios_system" -name IP_COMPONENT_VERSION "MTUuMA=="
+set_global_assignment -entity "nios_system_video_dma_controller_0" -library "nios_system" -name IP_COMPONENT_DESCRIPTION "RE1BIGNvbnRyb2xsZXIgZm9yIHZpZGVvIHByb2Nlc3Npbmcgb24gREUtU2VyaWVzIEJvYXJkcw=="
+set_global_assignment -entity "nios_system_video_dma_controller_0" -library "nios_system" -name IP_COMPONENT_PARAMETER "bW9kZQ==::RnJvbSBTdHJlYW0gdG8gTWVtb3J5::RE1BIERpcmVjdGlvbg=="
+set_global_assignment -entity "nios_system_video_dma_controller_0" -library "nios_system" -name IP_COMPONENT_PARAMETER "YWRkcl9tb2Rl::Q29uc2VjdXRpdmU=::QWRkcmVzc2luZyBNb2Rl"
+set_global_assignment -entity "nios_system_video_dma_controller_0" -library "nios_system" -name IP_COMPONENT_PARAMETER "c3RhcnRfYWRkcmVzcw==::MA==::RGVmYXVsdCBCdWZmZXIgU3RhcnRpbmcgQWRkcmVzcw=="
+set_global_assignment -entity "nios_system_video_dma_controller_0" -library "nios_system" -name IP_COMPONENT_PARAMETER "YmFja19zdGFydF9hZGRyZXNz::MA==::RGVmYXVsdCBCYWNrIEJ1ZmZlciBTdGFydCBBZGRyZXNz"
+set_global_assignment -entity "nios_system_video_dma_controller_0" -library "nios_system" -name IP_COMPONENT_PARAMETER "d2lkdGg=::MzIw::V2lkdGggKCMgb2YgcGl4ZWxzKQ=="
+set_global_assignment -entity "nios_system_video_dma_controller_0" -library "nios_system" -name IP_COMPONENT_PARAMETER "aGVpZ2h0::MjQw::SGVpZ2h0ICgjIG9mIGxpbmVzKQ=="
+set_global_assignment -entity "nios_system_video_dma_controller_0" -library "nios_system" -name IP_COMPONENT_PARAMETER "Y29sb3JfYml0cw==::OA==::Q29sb3IgQml0cw=="
+set_global_assignment -entity "nios_system_video_dma_controller_0" -library "nios_system" -name IP_COMPONENT_PARAMETER "Y29sb3JfcGxhbmVz::Mw==::Q29sb3IgUGxhbmVz"
+set_global_assignment -entity "nios_system_video_dma_controller_0" -library "nios_system" -name IP_COMPONENT_PARAMETER "ZG1hX2VuYWJsZWQ=::dHJ1ZQ==::RW5hYmxlZCBETUEgdHJhbnNmZXIgb24gcmVzZXQ="
+set_global_assignment -entity "nios_system_video_dma_controller_0" -library "nios_system" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfRkFNSUxZ::Q3ljbG9uZSBJViBF::QXV0byBERVZJQ0VfRkFNSUxZ"
+set_global_assignment -entity "nios_system_video_dma_controller_0" -library "nios_system" -name IP_COMPONENT_PARAMETER "QVVUT19DTEtfQ0xPQ0tfUkFURQ==::LTE=::QXV0byBDTE9DS19SQVRF"
+set_global_assignment -entity "nios_system_video_decoder_0" -library "nios_system" -name IP_COMPONENT_NAME "bmlvc19zeXN0ZW1fdmlkZW9fZGVjb2Rlcl8w"
+set_global_assignment -entity "nios_system_video_decoder_0" -library "nios_system" -name IP_COMPONENT_DISPLAY_NAME "VmlkZW8tSW4gRGVjb2Rlcg=="
+set_global_assignment -entity "nios_system_video_decoder_0" -library "nios_system" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "nios_system_video_decoder_0" -library "nios_system" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "nios_system_video_decoder_0" -library "nios_system" -name IP_COMPONENT_AUTHOR "QWx0ZXJhIFVuaXZlcnNpdHkgUHJvZ3JhbQ=="
+set_global_assignment -entity "nios_system_video_decoder_0" -library "nios_system" -name IP_COMPONENT_VERSION "MTUuMA=="
+set_global_assignment -entity "nios_system_video_decoder_0" -library "nios_system" -name IP_COMPONENT_DESCRIPTION "VmlkZW8tSW4gRGVjb2RlciBmb3IgREUtc2VyaWVzIEJvYXJkcw=="
+set_global_assignment -entity "nios_system_video_decoder_0" -library "nios_system" -name IP_COMPONENT_PARAMETER "dmlkZW9fc291cmNl::T24tYm9hcmQgVmlkZW8gSW4gKE5UU0Mgb3IgUEFMKQ==::VmlkZW8tSW4gU291cmNl"
+set_global_assignment -entity "nios_system_video_decoder_0" -library "nios_system" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfRkFNSUxZ::Q3ljbG9uZSBJViBF::QXV0byBERVZJQ0VfRkFNSUxZ"
+set_global_assignment -entity "nios_system_video_decoder_0" -library "nios_system" -name IP_COMPONENT_PARAMETER "QVVUT19DTEtfQ0xPQ0tfUkFURQ==::LTE=::QXV0byBDTE9DS19SQVRF"
+
+set_global_assignment -library "nios_system" -name VERILOG_FILE [file join $::quartus(qip_path) "nios_system.v"]
+set_global_assignment -library "nios_system" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/nios_system_video_stream_router_0.v"]
+set_global_assignment -library "nios_system" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_up_video_dma_control_slave.v"]
+set_global_assignment -library "nios_system" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_up_video_dma_to_memory.v"]
+set_global_assignment -library "nios_system" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_up_video_dma_to_stream.v"]
+set_global_assignment -library "nios_system" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/nios_system_video_dma_controller_0.v"]
+set_global_assignment -library "nios_system" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_up_video_itu_656_decoder.v"]
+set_global_assignment -library "nios_system" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_up_video_decoder_add_endofpacket.v"]
+set_global_assignment -library "nios_system" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_up_video_camera_decoder.v"]
+set_global_assignment -library "nios_system" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_up_video_dual_clock_fifo.v"]
+set_global_assignment -library "nios_system" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/nios_system_video_decoder_0.v"]

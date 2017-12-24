@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deploy
+ date="2017.12.08.22:05:01"
+ outputDirectory="C:/Users/Skyler/Desktop/ECE385FinalProject/db/ip/nios_system/">
+ <perimeter>
+  <parameter
+     name="AUTO_GENERATION_ID"
+     type="Integer"
+     defaultValue="0"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_UNIQUE_ID"
+     type="String"
+     defaultValue=""
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_FAMILY"
+     type="String"
+     defaultValue="Cyclone IV E"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE"
+     type="String"
+     defaultValue="EP4CE115F29C7"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_SPEEDGRADE"
+     type="String"
+     defaultValue="7"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLK_CLOCK_RATE"
+     type="Long"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLK_CLOCK_DOMAIN"
+     type="Integer"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLK_RESET_DOMAIN"
+     type="Integer"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_VIDEO_DMA_CONTROLLER_0_AVALON_DMA_MASTER_ADDRESS_MAP"
+     type="AddressMap"
+     defaultValue=""
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_VIDEO_DMA_CONTROLLER_0_AVALON_DMA_MASTER_ADDRESS_WIDTH"
+     type="AddressWidthType"
+     defaultValue=""
+     onHdl="0"
+     affectsHdl="1" />
+  <interface name="clk" kind="clock" start="0">
+   <property name="clockRate" value="50000000" />
+   <property name="externallyDriven" value="false" />
+   <property name="ptfSchematicName" value="" />
+   <port name="clk_clk" direction="input" role="clk" width="1" />
+  </interface>
+  <interface name="reset" kind="reset" start="0">
+   <property name="associatedClock" value="" />
+   <property name="synchronousEdges" value="NONE" />
+   <port name="reset_reset_n" direction="input" role="reset_n" width="1" />
+  </interface>
+  <interface name="video_decoder_0_external_interface" kind="conduit" start="0">
+   <property name="associatedClock" value="" />
+   <property name="associatedReset" value="" />
+   <port
+       name="video_decoder_0_external_interface_TD_CLK27"
+       direction="input"
+       role="TD_CLK27"
+       width="1" />
+   <port
+       name="video_decoder_0_external_interface_TD_DATA"
+       direction="input"
+       role="TD_DATA"
+       width="8" />
+   <port
+       name="video_decoder_0_external_interface_TD_HS"
+       direction="input"
+       role="TD_HS"
+       width="1" />
+   <port
+       name="video_decoder_0_external_interface_TD_VS"
+       direction="input"
+       role="TD_VS"
+       width="1" />
+   <port
+       name="video_decoder_0_external_interface_clk27_reset"
+       direction="input"
+       role="clk27_reset"
+       width="1" />
+   <port
+       name="video_decoder_0_external_interface_TD_RESET"
+       direction="output"
+       role="TD_RESET"
+       width="1" />
+   <port
+       name="video_decoder_0_external_interface_overflow_flag"
+       direction="output"
+       role="overflow_flag"
+       width="1" />
+  </interface>
+  <interface
+     name="video_dma_controller_0_avalon_dma_master"
+     kind="avalon"
+     start="1">
+   <property name="adaptsTo" value="" />
+   <property name="addressGroup" value="0" />
+   <property name="addressUnits" value="SYMBOLS" />
+   <property name="alwaysBurstMaxBurst" value="false" />
+   <property name="associatedClock" value="" />
+   <property name="associatedReset" value="" />
+   <property name="bitsPerSymbol" value="8" />
+   <property name="burstOnBurstBoundariesOnly" value="false" />
+   <property name="burstcountUnits" value="WORDS" />
+   <property name="constantBurstBehavior" value="false" />
+   <property name="dBSBigEndian" value="false" />
+   <property name="doStreamReads" value="false" />
+   <property name="doStreamWrites" value="false" />
+   <property name="holdTime" value="0" />
+   <property name="interleaveBursts" value="false" />
+   <property name="isAsynchronous" value="false" />
+   <property name="isBigEndian" value="false" />
+   <property name="isReadable" value="false" />
+   <property name="isWriteable" value="false" />
+   <property name="linewrapBursts" value="false" />
+   <property name="maxAddressWidth" value="32" />
+   <property name="maximumPendingReadTransactions" value="0" />
+   <property name="maximumPendingWriteTransactions" value="0" />
+   <property name="readLatency" value="0" />
+   <property name="readWaitTime" value="1" />
+   <property name="registerIncomingSignals" value="false" />
+   <property name="registerOutgoingSignals" value="false" />
+   <property name="setupTime" value="0" />
+   <property name="timingUnits" value="Cycles" />
+   <property name="writeWaitTime" value="0" />
+   <port
+       name="video_dma_controller_0_avalon_dma_master_address"
+       direction="output"
+       role="address"
+       width="32" />
+   <port
+       name="video_dma_controller_0_avalon_dma_master_waitrequest"
+       direction="input"
+       role="waitrequest"
+       width="1" />
+   <port
+       name="video_dma_controller_0_avalon_dma_master_write"
+       direction="output"
+       role="write"
+       width="1" />
+   <port
+       name="video_dma_controller_0_avalon_dma_master_writedata"
+       direction="output"
+       role="writedata"
+       width="32" />
+  </interface>
+  <interface name="video_stream" kind="conduit" start="0">
+   <property name="associatedClock" value="" />
+   <property name="associatedReset" value="" />
+   <port name="video_stream_export" direction="input" role="export" width="1" />
+  </interface>
+ </perimeter>
+ <entity
+   path=""
+   parameterizationKey="nios_system:1.0:AUTO_CLK_CLOCK_DOMAIN=-1,AUTO_CLK_CLOCK_RATE=-1,AUTO_CLK_RESET_DOMAIN=-1,AUTO_DEVICE=EP4CE115F29C7,AUTO_DEVICE_FAMILY=Cyclone IV E,AUTO_DEVICE_SPEEDGRADE=7,AUTO_GENERATION_ID=1512792298,AUTO_UNIQUE_ID=,AUTO_VIDEO_DMA_CONTROLLER_0_AVALON_DMA_MASTER_ADDRESS_MAP=,AUTO_VIDEO_DMA_CONTROLLER_0_AVALON_DMA_MASTER_ADDRESS_WIDTH=(clock_source:15.0:clockFrequency=50000000,clockFrequencyKnown=true,inputClockFrequency=0,resetSynchronousEdges=NONE)(altera_up_avalon_video_decoder:15.0:AUTO_CLK_CLOCK_RATE=-1,AUTO_DEVICE_FAMILY=Cyclone IV E,video_source=On-board Video In (NTSC or PAL))(altera_up_avalon_video_dma_controller:15.0:AUTO_CLK_CLOCK_RATE=-1,AUTO_DEVICE_FAMILY=Cyclone IV E,addr_mode=Consecutive,back_start_address=0,color_bits=8,color_planes=3,dma_enabled=true,height=240,mode=From Stream to Memory,start_address=0,width=320)(altera_up_avalon_video_stream_router:15.0:AUTO_CLK_CLOCK_RATE=-1,AUTO_DEVICE_FAMILY=Cyclone IV E,color_bits=8,color_planes=1,router_type=Merge,sync=false)"
+   instancePathKey="nios_system"
+   kind="nios_system"
+   version="1.0"
+   name="nios_system">
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="-1" />
+  <parameter
+     name="AUTO_VIDEO_DMA_CONTROLLER_0_AVALON_DMA_MASTER_ADDRESS_MAP"
+     value="" />
+  <parameter name="AUTO_GENERATION_ID" value="1512792298" />
+  <parameter name="AUTO_DEVICE" value="EP4CE115F29C7" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone IV E" />
+  <parameter name="AUTO_CLK_RESET_DOMAIN" value="-1" />
+  <parameter name="AUTO_CLK_CLOCK_DOMAIN" value="-1" />
+  <parameter name="AUTO_UNIQUE_ID" value="" />
+  <parameter
+     name="AUTO_VIDEO_DMA_CONTROLLER_0_AVALON_DMA_MASTER_ADDRESS_WIDTH"
+     value="" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="7" />
+  <generatedFiles>
+   <file
+       path="C:/Users/Skyler/Desktop/ECE385FinalProject/db/ip/nios_system/nios_system.v"
+       type="VERILOG" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="C:/Users/Skyler/Desktop/ECE385FinalProject/db/ip/nios_system/submodules/altera_up_video_itu_656_decoder.v"
+       type="VERILOG" />
+   <file
+       path="C:/Users/Skyler/Desktop/ECE385FinalProject/db/ip/nios_system/submodules/altera_up_video_decoder_add_endofpacket.v"
+       type="VERILOG" />
+   <file
+       path="C:/Users/Skyler/Desktop/ECE385FinalProject/db/ip/nios_system/submodules/altera_up_video_camera_decoder.v"
+       type="VERILOG" />
+   <file
+       path="C:/Users/Skyler/Desktop/ECE385FinalProject/db/ip/nios_system/submodules/altera_up_video_dual_clock_fifo.v"
+       type="VERILOG" />
+   <file
+       path="C:/Users/Skyler/Desktop/ECE385FinalProject/db/ip/nios_system/submodules/nios_system_video_decoder_0.v"
+       type="VERILOG" />
+   <file
+       path="C:/Users/Skyler/Desktop/ECE385FinalProject/db/ip/nios_system/submodules/altera_up_video_dma_control_slave.v"
+       type="VERILOG" />
+   <file
+       path="C:/Users/Skyler/Desktop/ECE385FinalProject/db/ip/nios_system/submodules/altera_up_video_dma_to_memory.v"
+       type="VERILOG" />
+   <file
+       path="C:/Users/Skyler/Desktop/ECE385FinalProject/db/ip/nios_system/submodules/altera_up_video_dma_to_stream.v"
+       type="VERILOG" />
+   <file
+       path="C:/Users/Skyler/Desktop/ECE385FinalProject/db/ip/nios_system/submodules/nios_system_video_dma_controller_0.v"
+       type="VERILOG" />
+   <file
+       path="C:/Users/Skyler/Desktop/ECE385FinalProject/db/ip/nios_system/submodules/nios_system_video_stream_router_0.v"
+       type="VERILOG" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file path="C:/Users/Skyler/Desktop/ECE385FinalProject/nios_system.qsys" />
+  </sourceFiles>
+  <childSourceFiles>
+   <file
+       path="C:/altera/15.0/ip/altera/university_program/audio_video/video/altera_up_avalon_video_decoder/altera_up_avalon_video_decoder_hw.tcl" />
+   <file
+       path="C:/altera/15.0/ip/altera/university_program/audio_video/video/altera_up_avalon_video_decoder/hdl/altera_up_video_itu_656_decoder.v" />
+   <file
+       path="C:/altera/15.0/ip/altera/university_program/audio_video/video/altera_up_avalon_video_decoder/hdl/altera_up_video_decoder_add_endofpacket.v" />
+   <file
+       path="C:/altera/15.0/ip/altera/university_program/audio_video/video/altera_up_avalon_video_decoder/hdl/altera_up_video_camera_decoder.v" />
+   <file
+       path="C:/altera/15.0/ip/altera/university_program/audio_video/video/altera_up_avalon_video_decoder/hdl/altera_up_video_dual_clock_fifo.v" />
+   <file
+       path="C:/altera/15.0/ip/altera/university_program/audio_video/video/altera_up_avalon_video_dma_controller/altera_up_avalon_video_dma_controller_hw.tcl" />
+   <file
+       path="C:/altera/15.0/ip/altera/university_program/audio_video/video/altera_up_avalon_video_dma_controller/hdl/altera_up_video_dma_control_slave.v" />
+   <file
+       path="C:/altera/15.0/ip/altera/university_program/audio_video/video/altera_up_avalon_video_dma_controller/hdl/altera_up_video_dma_to_memory.v" />
+   <file
+       path="C:/altera/15.0/ip/altera/university_program/audio_video/video/altera_up_avalon_video_dma_controller/hdl/altera_up_video_dma_to_stream.v" />
+   <file
+       path="C:/altera/15.0/ip/altera/university_program/audio_video/video/altera_up_avalon_video_stream_router/altera_up_avalon_video_stream_router_hw.tcl" />
+  </childSourceFiles>
+  <messages>
+   <message level="Debug" culprit="nios_system">queue size: 0 starting:nios_system "nios_system"</message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Debug">Transform: CustomInstructionTransform</message>
+   <message level="Debug">No custom instruction connections, skipping transform </message>
+   <message level="Debug" culprit="merlin_custom_instruction_transform"><![CDATA[After transform: <b>4</b> modules, <b>0</b> connections]]></message>
+   <message level="Debug">Transform: MMTransform</message>
+   <message level="Debug">Transform: InterruptMapperTransform</message>
+   <message level="Debug">Transform: InterruptSyncTransform</message>
+   <message level="Debug">Transform: InterruptFanoutTransform</message>
+   <message level="Debug">Transform: AvalonStreamingTransform</message>
+   <message level="Debug">Transform: ResetAdaptation</message>
+   <message level="Debug" culprit="nios_system"><![CDATA["<b>nios_system</b>" reuses <b>altera_up_avalon_video_decoder</b> "<b>submodules/nios_system_video_decoder_0</b>"]]></message>
+   <message level="Debug" culprit="nios_system"><![CDATA["<b>nios_system</b>" reuses <b>altera_up_avalon_video_dma_controller</b> "<b>submodules/nios_system_video_dma_controller_0</b>"]]></message>
+   <message level="Debug" culprit="nios_system"><![CDATA["<b>nios_system</b>" reuses <b>altera_up_avalon_video_stream_router</b> "<b>submodules/nios_system_video_stream_router_0</b>"]]></message>
+   <message level="Debug" culprit="nios_system">queue size: 2 starting:altera_up_avalon_video_decoder "submodules/nios_system_video_decoder_0"</message>
+   <message level="Info" culprit="video_decoder_0">Starting Generation of Video In Decoder</message>
+   <message level="Info" culprit="video_decoder_0"><![CDATA["<b>nios_system</b>" instantiated <b>altera_up_avalon_video_decoder</b> "<b>video_decoder_0</b>"]]></message>
+   <message level="Debug" culprit="nios_system">queue size: 1 starting:altera_up_avalon_video_dma_controller "submodules/nios_system_video_dma_controller_0"</message>
+   <message level="Info" culprit="video_dma_controller_0">Starting Generation of Video DMA Controller</message>
+   <message level="Info" culprit="video_dma_controller_0"><![CDATA["<b>nios_system</b>" instantiated <b>altera_up_avalon_video_dma_controller</b> "<b>video_dma_controller_0</b>"]]></message>
+   <message level="Debug" culprit="nios_system">queue size: 0 starting:altera_up_avalon_video_stream_router "submodules/nios_system_video_stream_router_0"</message>
+   <message level="Info" culprit="video_stream_router_0">Starting Generation of Video In Stream Router</message>
+   <message level="Info" culprit="video_stream_router_0"><![CDATA["<b>nios_system</b>" instantiated <b>altera_up_avalon_video_stream_router</b> "<b>video_stream_router_0</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="altera_up_avalon_video_decoder:15.0:AUTO_CLK_CLOCK_RATE=-1,AUTO_DEVICE_FAMILY=Cyclone IV E,video_source=On-board Video In (NTSC or PAL)"
+   instancePathKey="nios_system:.:video_decoder_0"
+   kind="altera_up_avalon_video_decoder"
+   version="15.0"
+   name="nios_system_video_decoder_0">
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="-1" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone IV E" />
+  <parameter name="video_source" value="On-board Video In (NTSC or PAL)" />
+  <generatedFiles>
+   <file
+       path="C:/Users/Skyler/Desktop/ECE385FinalProject/db/ip/nios_system/submodules/altera_up_video_itu_656_decoder.v"
+       type="VERILOG" />
+   <file
+       path="C:/Users/Skyler/Desktop/ECE385FinalProject/db/ip/nios_system/submodules/altera_up_video_decoder_add_endofpacket.v"
+       type="VERILOG" />
+   <file
+       path="C:/Users/Skyler/Desktop/ECE385FinalProject/db/ip/nios_system/submodules/altera_up_video_camera_decoder.v"
+       type="VERILOG" />
+   <file
+       path="C:/Users/Skyler/Desktop/ECE385FinalProject/db/ip/nios_system/submodules/altera_up_video_dual_clock_fifo.v"
+       type="VERILOG" />
+   <file
+       path="C:/Users/Skyler/Desktop/ECE385FinalProject/db/ip/nios_system/submodules/nios_system_video_decoder_0.v"
+       type="VERILOG" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file
+       path="C:/altera/15.0/ip/altera/university_program/audio_video/video/altera_up_avalon_video_decoder/altera_up_avalon_video_decoder_hw.tcl" />
+   <file
+       path="C:/altera/15.0/ip/altera/university_program/audio_video/video/altera_up_avalon_video_decoder/hdl/altera_up_video_itu_656_decoder.v" />
+   <file
+       path="C:/altera/15.0/ip/altera/university_program/audio_video/video/altera_up_avalon_video_decoder/hdl/altera_up_video_decoder_add_endofpacket.v" />
+   <file
+       path="C:/altera/15.0/ip/altera/university_program/audio_video/video/altera_up_avalon_video_decoder/hdl/altera_up_video_camera_decoder.v" />
+   <file
+       path="C:/altera/15.0/ip/altera/university_program/audio_video/video/altera_up_avalon_video_decoder/hdl/altera_up_video_dual_clock_fifo.v" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="nios_system" as="video_decoder_0" />
+  <messages>
+   <message level="Debug" culprit="nios_system">queue size: 2 starting:altera_up_avalon_video_decoder "submodules/nios_system_video_decoder_0"</message>
+   <message level="Info" culprit="video_decoder_0">Starting Generation of Video In Decoder</message>
+   <message level="Info" culprit="video_decoder_0"><![CDATA["<b>nios_system</b>" instantiated <b>altera_up_avalon_video_decoder</b> "<b>video_decoder_0</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="altera_up_avalon_video_dma_controller:15.0:AUTO_CLK_CLOCK_RATE=-1,AUTO_DEVICE_FAMILY=Cyclone IV E,addr_mode=Consecutive,back_start_address=0,color_bits=8,color_planes=3,dma_enabled=true,height=240,mode=From Stream to Memory,start_address=0,width=320"
+   instancePathKey="nios_system:.:video_dma_controller_0"
+   kind="altera_up_avalon_video_dma_controller"
+   version="15.0"
+   name="nios_system_video_dma_controller_0">
+  <parameter name="mode" value="From Stream to Memory" />
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="-1" />
+  <parameter name="dma_enabled" value="true" />
+  <parameter name="color_bits" value="8" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone IV E" />
+  <parameter name="start_address" value="0" />
+  <parameter name="addr_mode" value="Consecutive" />
+  <parameter name="width" value="320" />
+  <parameter name="color_planes" value="3" />
+  <parameter name="back_start_address" value="0" />
+  <parameter name="height" value="240" />
+  <generatedFiles>
+   <file
+       path="C:/Users/Skyler/Desktop/ECE385FinalProject/db/ip/nios_system/submodules/altera_up_video_dma_control_slave.v"
+       type="VERILOG" />
+   <file
+       path="C:/Users/Skyler/Desktop/ECE385FinalProject/db/ip/nios_system/submodules/altera_up_video_dma_to_memory.v"
+       type="VERILOG" />
+   <file
+       path="C:/Users/Skyler/Desktop/ECE385FinalProject/db/ip/nios_system/submodules/altera_up_video_dma_to_stream.v"
+       type="VERILOG" />
+   <file
+       path="C:/Users/Skyler/Desktop/ECE385FinalProject/db/ip/nios_system/submodules/nios_system_video_dma_controller_0.v"
+       type="VERILOG" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file
+       path="C:/altera/15.0/ip/altera/university_program/audio_video/video/altera_up_avalon_video_dma_controller/altera_up_avalon_video_dma_controller_hw.tcl" />
+   <file
+       path="C:/altera/15.0/ip/altera/university_program/audio_video/video/altera_up_avalon_video_dma_controller/hdl/altera_up_video_dma_control_slave.v" />
+   <file
+       path="C:/altera/15.0/ip/altera/university_program/audio_video/video/altera_up_avalon_video_dma_controller/hdl/altera_up_video_dma_to_memory.v" />
+   <file
+       path="C:/altera/15.0/ip/altera/university_program/audio_video/video/altera_up_avalon_video_dma_controller/hdl/altera_up_video_dma_to_stream.v" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="nios_system" as="video_dma_controller_0" />
+  <messages>
+   <message level="Debug" culprit="nios_system">queue size: 1 starting:altera_up_avalon_video_dma_controller "submodules/nios_system_video_dma_controller_0"</message>
+   <message level="Info" culprit="video_dma_controller_0">Starting Generation of Video DMA Controller</message>
+   <message level="Info" culprit="video_dma_controller_0"><![CDATA["<b>nios_system</b>" instantiated <b>altera_up_avalon_video_dma_controller</b> "<b>video_dma_controller_0</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="altera_up_avalon_video_stream_router:15.0:AUTO_CLK_CLOCK_RATE=-1,AUTO_DEVICE_FAMILY=Cyclone IV E,color_bits=8,color_planes=1,router_type=Merge,sync=false"
+   instancePathKey="nios_system:.:video_stream_router_0"
+   kind="altera_up_avalon_video_stream_router"
+   version="15.0"
+   name="nios_system_video_stream_router_0">
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="-1" />
+  <parameter name="color_bits" value="8" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone IV E" />
+  <parameter name="color_planes" value="1" />
+  <parameter name="router_type" value="Merge" />
+  <parameter name="sync" value="false" />
+  <generatedFiles>
+   <file
+       path="C:/Users/Skyler/Desktop/ECE385FinalProject/db/ip/nios_system/submodules/nios_system_video_stream_router_0.v"
+       type="VERILOG" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file
+       path="C:/altera/15.0/ip/altera/university_program/audio_video/video/altera_up_avalon_video_stream_router/altera_up_avalon_video_stream_router_hw.tcl" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="nios_system" as="video_stream_router_0" />
+  <messages>
+   <message level="Debug" culprit="nios_system">queue size: 0 starting:altera_up_avalon_video_stream_router "submodules/nios_system_video_stream_router_0"</message>
+   <message level="Info" culprit="video_stream_router_0">Starting Generation of Video In Stream Router</message>
+   <message level="Info" culprit="video_stream_router_0"><![CDATA["<b>nios_system</b>" instantiated <b>altera_up_avalon_video_stream_router</b> "<b>video_stream_router_0</b>"]]></message>
+  </messages>
+ </entity>
+</deploy>
